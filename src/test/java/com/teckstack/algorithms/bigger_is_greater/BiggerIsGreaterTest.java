@@ -17,11 +17,20 @@ public class BiggerIsGreaterTest {
 
 
     @Test
-    public void should_return_bigger() {
-        assertThat(biggerIsGreater.resolve("bb"), is( "no answer"));
-        assertThat(biggerIsGreater.resolve("ab"), is( "ba"));
-        assertThat(biggerIsGreater.resolve("hefg"), is( "hegf"));
-        assertThat(biggerIsGreater.resolve("dhck"), is( "dhkc"));
-        assertThat(biggerIsGreater.resolve("dkhc"), is( "hcdk"));
+    public void should_return_next_greater_lexicographical_permutation_o_n2() {
+        assertThat(biggerIsGreater.resolve_in_o_n2("bb"), is( "no answer"));
+        assertThat(biggerIsGreater.resolve_in_o_n2("ab"), is( "ba"));
+        assertThat(biggerIsGreater.resolve_in_o_n2("hefg"), is( "hegf"));
+        assertThat(biggerIsGreater.resolve_in_o_n2("dhck"), is( "dhkc"));
+        assertThat(biggerIsGreater.resolve_in_o_n2("dkhc"), is( "hcdk"));
+    }
+
+    @Test
+    public void should_return_next_greater_lexicographical_permutation_o_n() {
+        assertThat(biggerIsGreater.resolve_in_o_n("bb"), is( "no answer"));
+        assertThat(biggerIsGreater.resolve_in_o_n("ab"), is( "ba"));
+        assertThat(biggerIsGreater.resolve_in_o_n("hefg"), is( "hegf"));
+        assertThat(biggerIsGreater.resolve_in_o_n("dhck"), is( "dhkc"));
+        assertThat(biggerIsGreater.resolve_in_o_n("dkhc"), is( "hcdk"));
     }
 }
